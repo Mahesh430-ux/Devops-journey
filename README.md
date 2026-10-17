@@ -88,3 +88,40 @@ cat access.log | grep 404 | sort | uniq -c
 Learning Linux, one command at a time.
 
 `#Linux` `#LearningInPublic` `#OpenSource` `#DevOps` `#SysAdmin`
+
+
+
+
+
+# Day 02 – ACL Permissions, Linux Directories, grep & Troubleshooting
+
+## What I learned
+
+### 1. ACL permissions
+- View ACL: `getfacl file`
+- Give a user access: `setfacl -m u:username:rw file`
+- Remove a user's entry: `setfacl -x u:username file`
+- ACLs allow access control beyond owner/group/other.
+
+### 2. Important directories
+| Directory | Purpose |
+|-----------|---------|
+| /bin | Essential user commands |
+| /tmp | Temporary files |
+| /root | Home directory of the root user |
+| /dev | Device files |
+
+### 3. grep
+- `grep "error" file.log` – search for a word
+- `grep -i "error" file.log` – ignore case
+- `grep -r "text" /path` – search recursively
+
+### 4. Troubleshooting practice
+1. Read the error message carefully.
+2. Check permissions with `ls -l` and `getfacl`.
+3. Search logs with `grep`.
+4. Fix with `chmod` or `setfacl`.
+5. Test again to confirm it works.
+
+## Key takeaway
+Understanding the file system and permissions makes troubleshooting much faster.
