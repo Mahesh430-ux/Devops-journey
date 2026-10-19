@@ -445,3 +445,54 @@ getfacl secret.txt                          # bob has r--
 
 *Learning in public. If this helped, give the repo a star and follow my journey!*
 
+
+
+
+
+
+
+# 🌐 Networking for Cloud & DevOps Engineers
+
+> Linux teaches you how to run things. Networking teaches you how things talk.
+> Learn both. Linux + Networking = the foundation of Cloud & DevOps.
+
+A practical, hands-on guide to the networking concepts every Cloud and DevOps
+engineer needs, built as a learning-in-public project.
+
+## 📚 What's covered
+- OSI & TCP/IP model
+- IP addressing, CIDR & subnetting
+- TCP vs UDP, common ports
+- DNS, DHCP, NAT
+- Routing & switching
+- HTTP, HTTPS & TLS
+- Load balancing (L4 vs L7)
+- Firewalls, Security Groups & NACLs
+- Cloud networking (VPC, gateways, peering, Transit Gateway)
+- VPN & hybrid connectivity
+- Kubernetes networking (CNI, Services, Ingress, NetworkPolicy)
+- CDN, reverse proxy & service mesh
+- Troubleshooting toolkit
+
+## 🛠️ Hands-on labs
+- [ ] Subnet a /16 network into /24s by hand
+- [ ] Build a VPC with public and private subnets
+- [ ] Break DNS on purpose, then fix it with dig
+- [ ] Capture a TCP handshake with tcpdump
+- [ ] Debug a pod that can't reach a service
+
+## 🧰 Troubleshooting commands
+ping | traceroute | mtr | dig | nslookup | curl -v | ss -tulnp | ip a | ip r | tcpdump | nmap | nc
+
+## 🗺️ Learning path
+1. Linux fundamentals
+2. Networking basics
+3. Cloud networking
+4. Kubernetes networking
+
+## 🤝 Contributing
+PRs welcome! Add notes, diagrams, labs or real-world debugging stories.
+
+⭐ Star the repo if it helps you.
+
+Topics: `devops` `networking` `linux` `cloud` `aws` `kubernetes` `sre` `learning-in-public`
