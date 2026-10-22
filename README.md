@@ -496,3 +496,127 @@ PRs welcome! Add notes, diagrams, labs or real-world debugging stories.
 ⭐ Star the repo if it helps you.
 
 Topics: `devops` `networking` `linux` `cloud` `aws` `kubernetes` `sre` `learning-in-public`
+
+
+# ☁️ AWS CLI Commands Cheat Sheet
+
+50 commonly used AWS CLI commands, grouped by service, for cloud and DevOps work and interview prep.
+
+## ⚙️ Setup
+​```bash
+aws configure                    # set access key, secret, region, output
+aws sts get-caller-identity      # verify who you're authenticated as
+​```
+
+## 🔧 Common Options
+| Option | Purpose |
+|--------|---------|
+| `--region` | Specify region |
+| `--profile` | Use a specific named profile |
+| `--output` | Format: `json` / `yaml` / `text` / `table` |
+| `--query` | Filter output using JMESPath |
+| `--debug` | Debug logs |
+
+## 🔐 IAM
+| Command | What it does |
+|---------|--------------|
+| `aws iam get-user` | Get current user |
+| `aws iam list-users` | List all IAM users |
+| `aws iam get-user-policy` | Get inline user policy |
+| `aws iam list-attached-user-policies` | List attached policies |
+| `aws iam create-user` | Create new user |
+
+## 🪣 S3
+| Command | What it does |
+|---------|--------------|
+| `aws s3 ls` | List all buckets |
+| `aws s3 ls s3://bucket` | List objects in a bucket |
+| `aws s3 mb s3://bucket` | Create a bucket |
+| `aws s3 cp file s3://bucket/` | Upload file to S3 |
+| `aws s3 sync . s3://bucket/` | Sync local folder to S3 |
+
+## 🖥️ EC2
+| Command | What it does |
+|---------|--------------|
+| `aws ec2 describe-instances` | List EC2 instances |
+| `aws ec2 run-instances` | Launch new instance |
+| `aws ec2 stop-instances` | Stop instance |
+| `aws ec2 start-instances` | Start instance |
+| `aws ec2 terminate-instances` | Terminate instance |
+
+## 🌐 VPC
+| Command | What it does |
+|---------|--------------|
+| `aws ec2 describe-vpcs` | List VPCs |
+| `aws ec2 create-vpc` | Create a VPC |
+| `aws ec2 describe-subnets` | List subnets |
+| `aws ec2 create-subnet` | Create a subnet |
+| `aws ec2 describe-security-groups` | List security groups |
+
+## 🗄️ RDS
+| Command | What it does |
+|---------|--------------|
+| `aws rds describe-db-instances` | List RDS instances |
+| `aws rds create-db-instance` | Create RDS instance |
+| `aws rds start-db-instance` | Start RDS instance |
+| `aws rds stop-db-instance` | Stop RDS instance |
+| `aws rds delete-db-instance` | Delete RDS instance |
+
+## 📊 CloudWatch
+| Command | What it does |
+|---------|--------------|
+| `aws cloudwatch list-metrics` | List metrics |
+| `aws cloudwatch get-metric-data` | Get metric data |
+| `aws cloudwatch describe-alarms` | List alarms |
+| `aws cloudwatch put-metric-alarm` | Create alarm |
+| `aws cloudwatch delete-alarms` | Delete alarm |
+
+## ⚡ Lambda
+| Command | What it does |
+|---------|--------------|
+| `aws lambda list-functions` | List functions |
+| `aws lambda create-function` | Create function |
+| `aws lambda invoke` | Invoke function |
+| `aws lambda update-function-code` | Update function code |
+| `aws lambda delete-function` | Delete function |
+
+## 📦 DynamoDB
+| Command | What it does |
+|---------|--------------|
+| `aws dynamodb list-tables` | List tables |
+| `aws dynamodb create-table` | Create table |
+| `aws dynamodb scan` | Scan table data |
+| `aws dynamodb query` | Query table data |
+| `aws dynamodb delete-table` | Delete table |
+
+## 🏗️ CloudFormation
+| Command | What it does |
+|---------|--------------|
+| `aws cloudformation list-stacks` | List all stacks |
+| `aws cloudformation create-stack` | Create stack |
+| `aws cloudformation update-stack` | Update stack |
+| `aws cloudformation describe-stacks` | Describe stacks |
+| `aws cloudformation delete-stack` | Delete stack |
+
+## 🧰 Other Useful Commands
+| Command | What it does |
+|---------|--------------|
+| `aws ssm send-command` | Run command on instances |
+| `aws autoscaling describe-auto-scaling-groups` | List Auto Scaling groups |
+| `aws elbv2 describe-load-balancers` | List load balancers |
+| `aws route53 list-hosted-zones` | List Route 53 hosted zones |
+| `aws sts get-caller-identity` | Get caller identity |
+
+## 💡 Pro Tips
+- Use `--help` on any command, e.g. `aws ec2 run-instances help`
+- Use `--query` with `--output table` for readable results
+- Follow **least privilege** when creating IAM users and policies
+- ⚠️ Be careful with `delete` and `terminate` commands, and watch your costs
+- Practice in the AWS Free Tier
+
+## 🚀 Next Steps
+- [ ] Add real examples with `--query` filters
+- [ ] Write shell scripts to automate EC2 start/stop
+- [ ] Practice with Terraform / CloudFormation
+
+⭐ Star this repo if it helps your cloud journey!
